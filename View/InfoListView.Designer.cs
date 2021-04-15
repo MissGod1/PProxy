@@ -29,17 +29,22 @@ namespace AwesomeProject.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoListView));
             this.lbList = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmDel = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbList
             // 
             this.lbList.BackColor = System.Drawing.Color.White;
             this.lbList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbList.ContextMenuStrip = this.contextMenuStrip1;
             this.lbList.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.lbList.FormattingEnabled = true;
@@ -48,6 +53,22 @@ namespace AwesomeProject.View
             this.lbList.Name = "lbList";
             this.lbList.Size = new System.Drawing.Size(480, 640);
             this.lbList.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmDel});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(317, 88);
+            // 
+            // tsmDel
+            // 
+            this.tsmDel.Image = global::AwesomeProject.Properties.Resources.ashbin;
+            this.tsmDel.Name = "tsmDel";
+            this.tsmDel.Size = new System.Drawing.Size(316, 40);
+            this.tsmDel.Text = "删除";
+            this.tsmDel.Click += new System.EventHandler(this.tsmDel_Click);
             // 
             // btnOk
             // 
@@ -109,6 +130,7 @@ namespace AwesomeProject.View
             this.Name = "InfoListView";
             this.Text = "ListView";
             this.Load += new System.EventHandler(this.InfoListView_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -119,5 +141,7 @@ namespace AwesomeProject.View
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tsmDel;
     }
 }

@@ -29,6 +29,7 @@ namespace AwesomeProject.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRun = new System.Windows.Forms.Button();
@@ -40,8 +41,13 @@ namespace AwesomeProject.View
             this.btnGSetting = new System.Windows.Forms.Button();
             this.btnPSetting = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmMain = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topPanel.SuspendLayout();
+            this.cms.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -109,6 +115,7 @@ namespace AwesomeProject.View
             this.btnMin.Size = new System.Drawing.Size(50, 50);
             this.btnMin.TabIndex = 3;
             this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnProxy
             // 
@@ -183,6 +190,36 @@ namespace AwesomeProject.View
             this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.ContextMenuStrip = this.cms;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
+            // cms
+            // 
+            this.cms.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmMain,
+            this.tsmExit});
+            this.cms.Name = "cms";
+            this.cms.Size = new System.Drawing.Size(161, 80);
+            // 
+            // tsmExit
+            // 
+            this.tsmExit.Name = "tsmExit";
+            this.tsmExit.Size = new System.Drawing.Size(160, 38);
+            this.tsmExit.Text = "退出";
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
+            // 
+            // tsmMain
+            // 
+            this.tsmMain.Name = "tsmMain";
+            this.tsmMain.Size = new System.Drawing.Size(160, 38);
+            this.tsmMain.Text = "主界面";
+            this.tsmMain.Click += new System.EventHandler(this.tsmMain_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -201,9 +238,10 @@ namespace AwesomeProject.View
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " AwesomeProject";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.topPanel.ResumeLayout(false);
+            this.cms.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -220,6 +258,10 @@ namespace AwesomeProject.View
         private System.Windows.Forms.Button btnGSetting;
         private System.Windows.Forms.Button btnPSetting;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ContextMenuStrip cms;
+        private System.Windows.Forms.ToolStripMenuItem tsmExit;
+        private System.Windows.Forms.ToolStripMenuItem tsmMain;
     }
 }
 

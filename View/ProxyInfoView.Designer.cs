@@ -43,6 +43,7 @@ namespace AwesomeProject.View
             this.label5 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.nudPort = new System.Windows.Forms.NumericUpDown();
+            this.cbDisplayPwd = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,6 +149,7 @@ namespace AwesomeProject.View
             this.tbPwd.Font = new System.Drawing.Font("宋体", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbPwd.Location = new System.Drawing.Point(121, 394);
             this.tbPwd.Name = "tbPwd";
+            this.tbPwd.PasswordChar = '*';
             this.tbPwd.Size = new System.Drawing.Size(369, 50);
             this.tbPwd.TabIndex = 6;
             // 
@@ -211,12 +213,22 @@ namespace AwesomeProject.View
             this.nudPort.Name = "nudPort";
             this.nudPort.Size = new System.Drawing.Size(369, 50);
             this.nudPort.TabIndex = 8;
-            this.nudPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudPort.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            // 
+            // cbDisplayPwd
+            // 
+            this.cbDisplayPwd.AutoSize = true;
+            this.cbDisplayPwd.Location = new System.Drawing.Point(121, 451);
+            this.cbDisplayPwd.Name = "cbDisplayPwd";
+            this.cbDisplayPwd.Size = new System.Drawing.Size(138, 28);
+            this.cbDisplayPwd.TabIndex = 9;
+            this.cbDisplayPwd.Text = "显示密码";
+            this.cbDisplayPwd.UseVisualStyleBackColor = true;
+            this.cbDisplayPwd.CheckStateChanged += new System.EventHandler(this.cbDisplayPwd_CheckStateChanged);
             // 
             // ProxyInfoView
             // 
@@ -224,6 +236,7 @@ namespace AwesomeProject.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(500, 800);
+            this.Controls.Add(this.cbDisplayPwd);
             this.Controls.Add(this.nudPort);
             this.Controls.Add(this.cbbMethod);
             this.Controls.Add(this.tbName);
@@ -262,5 +275,6 @@ namespace AwesomeProject.View
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.NumericUpDown nudPort;
+        private System.Windows.Forms.CheckBox cbDisplayPwd;
     }
 }

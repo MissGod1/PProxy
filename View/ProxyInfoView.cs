@@ -60,5 +60,16 @@ namespace AwesomeProject.View
             this.DialogResult = DialogResult.OK;
             this.Dispose();
         }
+
+        private void cbDisplayPwd_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cbDisplayPwd.Checked)
+            {
+                tbPwd.PasswordChar = '\0';
+            } else
+            {
+                tbPwd.PasswordChar = '*';
+            }
+        }
     }
 }

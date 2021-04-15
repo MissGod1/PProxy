@@ -22,14 +22,14 @@ namespace AwesomeProject.View
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            Environment.Exit(0);
+            this.Hide();
+            notifyIcon.Visible = true;
         }
 
         private void btnGame_Click(object sender, EventArgs e)
         {
             var gamelist = fc.GetFileList(Properties.Resources.modePath, "conf");
-            var infoView = new InfoListView(gamelist, new Point(this.Location.X + this.Width, this.Location.Y));
+            var infoView = new InfoListView(gamelist, new Point(this.Location.X + this.Width, this.Location.Y), true);
             if (infoView.ShowDialog() == DialogResult.OK && infoView.selected != null)
             {
                 btnGame.Text = infoView.selected;
@@ -39,7 +39,7 @@ namespace AwesomeProject.View
         private void btnProxy_Click(object sender, EventArgs e)
         {
             var proxylist = fc.GetFileList(Properties.Resources.serverPath, "json");
-            var infoView = new InfoListView(proxylist, new Point(this.Location.X + this.Width, this.Location.Y));
+            var infoView = new InfoListView(proxylist, new Point(this.Location.X + this.Width, this.Location.Y), false);
             if (infoView.ShowDialog() == DialogResult.OK && infoView.selected != null)
             {
                 btnProxy.Text = infoView.selected;
@@ -73,9 +73,11 @@ namespace AwesomeProject.View
             try
             {
                 var process = fc.GetFileLines($"{Properties.Resources.modePath}/{filename}.conf");
-                var dialog = new GameInfoView(new Point(this.Location.X + this.Width, this.Location.Y), true);
-                dialog.name = filename;
-                dialog.process = process;
+                var dialog = new GameInfoView(new Point(this.Location.X + this.Width, this.Location.Y), true)
+                {
+                    name = filename,
+                    process = process
+                };
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     fc.SaveFile($"{Properties.Resources.modePath}/{dialog.name}.conf", dialog.process, true);
@@ -106,9 +108,11 @@ namespace AwesomeProject.View
             try
             {
                 var proxy = fc.GetJsonFile($"{Properties.Resources.serverPath}/{filename}.json");
-                var dialog = new ProxyInfoView(new Point(this.Location.X + this.Width, this.Location.Y), true);
-                dialog.name = filename;
-                dialog.proxy = proxy;
+                var dialog = new ProxyInfoView(new Point(this.Location.X + this.Width, this.Location.Y), true)
+                {
+                    name = filename,
+                    proxy = proxy
+                };
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     fc.SaveJsonFile(dialog.proxy, $"{Properties.Resources.serverPath}/{dialog.name}.json", true);
@@ -122,9 +126,19 @@ namespace AwesomeProject.View
         }
         private ContextMenuStrip CreateContextMenu(EventHandler add, EventHandler edit)
         {
-            var cMenu = new ContextMenuStrip();
-            cMenu.Items.Add(new ToolStripMenuItem("新增", Properties.Resources.add_circle, add));
-            cMenu.Items.Add(new ToolStripMenuItem("修改", Properties.Resources.edit, edit));
+            var cMenu = new ContextMenuStrip()
+            {
+                ImageScalingSize = new System.Drawing.Size(32, 32),
+                Size = new System.Drawing.Size(153, 44)
+            };
+            cMenu.Items.Add(new ToolStripMenuItem("新增", Properties.Resources.add_circle, add) 
+            {
+               Size = new System.Drawing.Size(152, 40)
+            });
+            cMenu.Items.Add(new ToolStripMenuItem("修改", Properties.Resources.edit, edit)
+            {
+                Size = new System.Drawing.Size(152, 40)
+            });
             return cMenu;
         }
 
@@ -172,6 +186,35 @@ namespace AwesomeProject.View
         private void btnStop_Click(object sender, EventArgs e)
         {
             pc.Stop();
+        }
+
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            Environment.Exit(0);
+        }
+
+        private void tsmMain_Click(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+                notifyIcon.Visible = false;
+            }
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            this.BringToFront();
+            notifyIcon.Visible = false;
         }
     }
 }
