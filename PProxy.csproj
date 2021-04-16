@@ -168,6 +168,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="LICENSE" />
     <Content Include="Resources\add-circle.png" />
     <Content Include="Resources\ashbin.png" />
     <Content Include="Resources\close.png" />
