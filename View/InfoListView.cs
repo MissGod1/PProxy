@@ -1,10 +1,10 @@
-﻿using AwesomeProject.Controller;
+﻿using PProxy.Controller;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     public partial class InfoListView : Form
     {
@@ -51,7 +51,8 @@ namespace AwesomeProject.View
             if (state)
             {
                 success = new FileController().DeleteFile($"{Properties.Resources.modePath}/{lbList.SelectedItem.ToString()}.conf");
-            } else
+            }
+            else
             {
                 success = new FileController().DeleteFile($"{Properties.Resources.serverPath}/{lbList.SelectedItem.ToString()}.json");
             }
@@ -61,7 +62,7 @@ namespace AwesomeProject.View
                 lbList.Items.Clear();
                 lbList.Items.AddRange(list);
             }
-            
+
         }
     }
 }

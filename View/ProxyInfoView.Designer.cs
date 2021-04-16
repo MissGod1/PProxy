@@ -1,5 +1,5 @@
 ﻿
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     partial class ProxyInfoView
     {
@@ -79,7 +79,7 @@ namespace AwesomeProject.View
             // 
             // btnClose
             // 
-            this.btnClose.BackgroundImage = global::AwesomeProject.Properties.Resources.close;
+            this.btnClose.BackgroundImage = global::PProxy.Properties.Resources.close;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

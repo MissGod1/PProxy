@@ -1,5 +1,5 @@
 ﻿
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     partial class MainWindow
     {
@@ -52,7 +52,7 @@ namespace AwesomeProject.View
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AwesomeProject.Properties.Resources.f4;
+            this.pictureBox1.Image = global::PProxy.Properties.Resources.f4;
             this.pictureBox1.Location = new System.Drawing.Point(50, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 400);
@@ -77,7 +77,7 @@ namespace AwesomeProject.View
             // 
             // btnClose
             // 
-            this.btnClose.BackgroundImage = global::AwesomeProject.Properties.Resources.close;
+            this.btnClose.BackgroundImage = global::PProxy.Properties.Resources.close;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,7 +104,7 @@ namespace AwesomeProject.View
             // 
             // btnMin
             // 
-            this.btnMin.BackgroundImage = global::AwesomeProject.Properties.Resources.minus;
+            this.btnMin.BackgroundImage = global::PProxy.Properties.Resources.minus;
             this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMin.FlatAppearance.BorderSize = 0;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -150,7 +150,7 @@ namespace AwesomeProject.View
             // btnGSetting
             // 
             this.btnGSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(203)))), ((int)(((byte)(110)))));
-            this.btnGSetting.BackgroundImage = global::AwesomeProject.Properties.Resources.setting;
+            this.btnGSetting.BackgroundImage = global::PProxy.Properties.Resources.setting;
             this.btnGSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGSetting.FlatAppearance.BorderSize = 0;
             this.btnGSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -164,7 +164,7 @@ namespace AwesomeProject.View
             // btnPSetting
             // 
             this.btnPSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(203)))), ((int)(((byte)(110)))));
-            this.btnPSetting.BackgroundImage = global::AwesomeProject.Properties.Resources.setting;
+            this.btnPSetting.BackgroundImage = global::PProxy.Properties.Resources.setting;
             this.btnPSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPSetting.FlatAppearance.BorderSize = 0;
             this.btnPSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

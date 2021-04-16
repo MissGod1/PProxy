@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace AwesomeProject
+namespace PProxy
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace AwesomeProject
         [STAThread]
         static void Main()
         {
-            using (var mutex = new Mutex(false, "Global\\AwesomeProject"))
+            using (var mutex = new Mutex(false, "Global\\PProxy"))
             {
                 if (!mutex.WaitOne(0, false))
                 {

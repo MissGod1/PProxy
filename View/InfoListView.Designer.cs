@@ -1,5 +1,5 @@
 ﻿
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     partial class InfoListView
     {
@@ -64,7 +64,7 @@ namespace AwesomeProject.View
             // 
             // tsmDel
             // 
-            this.tsmDel.Image = global::AwesomeProject.Properties.Resources.ashbin;
+            this.tsmDel.Image = global::PProxy.Properties.Resources.ashbin;
             this.tsmDel.Name = "tsmDel";
             this.tsmDel.Size = new System.Drawing.Size(316, 40);
             this.tsmDel.Text = "删除";
@@ -102,7 +102,7 @@ namespace AwesomeProject.View
             // 
             // btnClose
             // 
-            this.btnClose.BackgroundImage = global::AwesomeProject.Properties.Resources.close;
+            this.btnClose.BackgroundImage = global::PProxy.Properties.Resources.close;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

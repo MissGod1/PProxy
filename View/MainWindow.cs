@@ -1,9 +1,9 @@
-﻿using AwesomeProject.Controller;
+﻿using PProxy.Controller;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     public partial class MainWindow : Form
     {
@@ -131,9 +131,9 @@ namespace AwesomeProject.View
                 ImageScalingSize = new System.Drawing.Size(32, 32),
                 Size = new System.Drawing.Size(153, 44)
             };
-            cMenu.Items.Add(new ToolStripMenuItem("新增", Properties.Resources.add_circle, add) 
+            cMenu.Items.Add(new ToolStripMenuItem("新增", Properties.Resources.add_circle, add)
             {
-               Size = new System.Drawing.Size(152, 40)
+                Size = new System.Drawing.Size(152, 40)
             });
             cMenu.Items.Add(new ToolStripMenuItem("修改", Properties.Resources.edit, edit)
             {
@@ -178,7 +178,8 @@ namespace AwesomeProject.View
 
         private void ProcessExitedHandler(object sender, EventArgs e)
         {
-            this.Invoke(new EventHandler(delegate {
+            this.Invoke(new EventHandler(delegate
+            {
                 btnRun.BringToFront();
             }));
         }

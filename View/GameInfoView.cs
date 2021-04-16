@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     public partial class GameInfoView : Form
     {

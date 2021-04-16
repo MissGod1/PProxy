@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace AwesomeProject.View
+namespace PProxy.View
 {
     public partial class ProxyInfoView : Form
     {
@@ -43,7 +43,7 @@ namespace AwesomeProject.View
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbAddress.Text.Trim())
-//                || string.IsNullOrEmpty(tbPort.Text.Trim())
+                //                || string.IsNullOrEmpty(tbPort.Text.Trim())
                 || string.IsNullOrEmpty(tbPwd.Text.Trim())
                 || string.IsNullOrEmpty(tbName.Text.Trim())
                 || cbbMethod.SelectedItem == null)
@@ -66,7 +66,8 @@ namespace AwesomeProject.View
             if (cbDisplayPwd.Checked)
             {
                 tbPwd.PasswordChar = '\0';
-            } else
+            }
+            else
             {
                 tbPwd.PasswordChar = '*';
             }

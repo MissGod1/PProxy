@@ -1,7 +1,7 @@
-﻿using System.Diagnostics;
-using System;
+﻿using System;
+using System.Diagnostics;
 
-namespace AwesomeProject.Controller
+namespace PProxy.Controller
 {
     class ProcessController
     {
@@ -15,7 +15,7 @@ namespace AwesomeProject.Controller
         private Process GetProcess(EventHandler handler)
         {
             var p = new Process();
-            p.StartInfo.FileName = "AwesomeProject-cli.exe";
+            p.StartInfo.FileName = "PProxy-cli.exe";
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.CreateNoWindow = true;
             p.EnableRaisingEvents = true;
