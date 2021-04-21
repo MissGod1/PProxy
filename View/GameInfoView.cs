@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -12,11 +13,13 @@ namespace PProxy.View
         public string name;
         public string[] process;
         public bool edit;
+        private FolderBrowserDialog folderDialog;
         public GameInfoView(Point _point, bool _edit = false)
         {
             InitializeComponent();
             point = _point;
             edit = _edit;
+            folderDialog = new FolderBrowserDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -52,6 +55,20 @@ namespace PProxy.View
                 .Where(s => !string.IsNullOrEmpty(s)).ToArray();
             this.DialogResult = DialogResult.OK;
             this.Dispose();
+        }
+
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                var files = Directory.EnumerateFiles(folderDialog.SelectedPath, "*.exe", SearchOption.AllDirectories);
+                files = files.Select(s => Path.GetFileName(s));
+                foreach (var item in files)
+                {
+                    tbProcess.Text += item + "\n";
+                }
+                
+            }
         }
     }
 }

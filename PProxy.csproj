@@ -176,7 +176,6 @@
     <Content Include="Resources\f4.ico" />
     <Content Include="Resources\f4.png" />
     <Content Include="Resources\minus.png" />
-    <Content Include="Resources\refresh.png" />
     <Content Include="Resources\setting.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

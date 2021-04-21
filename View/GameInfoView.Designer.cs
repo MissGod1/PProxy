@@ -37,6 +37,7 @@ namespace PProxy.View
             this.tbName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbProcess = new System.Windows.Forms.TextBox();
+            this.btnScan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@ namespace PProxy.View
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.groupBox1.Location = new System.Drawing.Point(16, 111);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(474, 583);
+            this.groupBox1.Size = new System.Drawing.Size(474, 519);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "进程";
@@ -122,8 +123,25 @@ namespace PProxy.View
             this.tbProcess.Location = new System.Drawing.Point(6, 43);
             this.tbProcess.Multiline = true;
             this.tbProcess.Name = "tbProcess";
-            this.tbProcess.Size = new System.Drawing.Size(462, 534);
+            this.tbProcess.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.tbProcess.Size = new System.Drawing.Size(462, 470);
             this.tbProcess.TabIndex = 6;
+            // 
+            // btnScan
+            // 
+            this.btnScan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(203)))), ((int)(((byte)(110)))));
+            this.btnScan.FlatAppearance.BorderSize = 0;
+            this.btnScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScan.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnScan.ForeColor = System.Drawing.Color.Transparent;
+            this.btnScan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScan.Location = new System.Drawing.Point(10, 636);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(480, 60);
+            this.btnScan.TabIndex = 3;
+            this.btnScan.Text = "打开游戏目录";
+            this.btnScan.UseVisualStyleBackColor = false;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
             // GameInfoView
             // 
@@ -136,6 +154,7 @@ namespace PProxy.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnScan);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -157,5 +176,6 @@ namespace PProxy.View
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbProcess;
+        private System.Windows.Forms.Button btnScan;
     }
 }

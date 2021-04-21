@@ -160,9 +160,9 @@ namespace PProxy.View
             this.cbbMethod.Font = new System.Drawing.Font("宋体", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbbMethod.FormattingEnabled = true;
             this.cbbMethod.Items.AddRange(new object[] {
-            "AES_128_GCM",
-            "AES_192_GCM",
-            "AES_256_GCM",
+            "AES-128-GCM",
+            "AES-192-GCM",
+            "AES-256-GCM",
             "CHACHA20_POLY1305",
             "AES-128-CFB",
             "AES-128-CTR",
