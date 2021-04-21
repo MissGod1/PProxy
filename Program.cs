@@ -13,14 +13,15 @@ namespace PProxy
         [STAThread]
         static void Main()
         {
-            using (var mutex = new Mutex(false, "Global\\PProxy"))
+            bool flag;
+            var mutex = new Mutex(true, @"Global\PProxy", out flag);
+
+            if (!flag)
             {
-                if (!mutex.WaitOne(0, false))
-                {
-                    MessageBox.Show("程序已在运行中", "Tips", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Environment.Exit(1);
-                }
+                MessageBox.Show("程序已在运行中", "Tips", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Environment.Exit(1);
             }
+
             Directory.SetCurrentDirectory(Application.StartupPath);
 
             //创建模式目录用于存放游戏配置

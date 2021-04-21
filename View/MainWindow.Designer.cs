@@ -43,8 +43,8 @@ namespace PProxy.View
             this.btnStop = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMain = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topPanel.SuspendLayout();
             this.cms.SuspendLayout();
@@ -194,7 +194,7 @@ namespace PProxy.View
             // 
             this.notifyIcon.ContextMenuStrip = this.cms;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Text = "PProxy";
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
             // cms
@@ -206,19 +206,19 @@ namespace PProxy.View
             this.cms.Name = "cms";
             this.cms.Size = new System.Drawing.Size(161, 80);
             // 
-            // tsmExit
-            // 
-            this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(160, 38);
-            this.tsmExit.Text = "退出";
-            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
-            // 
             // tsmMain
             // 
             this.tsmMain.Name = "tsmMain";
             this.tsmMain.Size = new System.Drawing.Size(160, 38);
             this.tsmMain.Text = "主界面";
             this.tsmMain.Click += new System.EventHandler(this.tsmMain_Click);
+            // 
+            // tsmExit
+            // 
+            this.tsmExit.Name = "tsmExit";
+            this.tsmExit.Size = new System.Drawing.Size(160, 38);
+            this.tsmExit.Text = "退出";
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
             // MainWindow
             // 
