@@ -119,11 +119,11 @@ namespace PProxy.View
             // 
             // tbProcess
             // 
-            this.tbProcess.Font = new System.Drawing.Font("宋体", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbProcess.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbProcess.Location = new System.Drawing.Point(6, 43);
             this.tbProcess.Multiline = true;
             this.tbProcess.Name = "tbProcess";
-            this.tbProcess.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.tbProcess.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tbProcess.Size = new System.Drawing.Size(462, 470);
             this.tbProcess.TabIndex = 6;
             // 
