@@ -65,7 +65,7 @@ namespace PProxy.View
                 files = files.Select(s => Path.GetFileName(s));
                 foreach (var item in files)
                 {
-                    tbProcess.Text += item + "\n";
+                    tbProcess.Text += item + "\r\n";
                 }
                 
             }
